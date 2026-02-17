@@ -24,25 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Fetch data from Google Apps Script
-            // Note: In a real scenario with CORS, you might need 'no-cors' or handle it via a proxy if GAS is strict.
-            // Usually, GAS Web Apps published as 'Anyone, even anonymous' work fine with simple GET/POST.
+            // Note: GAS Web App must be deployed as "Anyone, even anonymous" for this to work without CORS issues on simple GET requests.
 
-            // For now, I'll simulate the fetch to show you how it works visually.
-            // Replace the setTimeout block with the actual fetch call below when ready.
-
-            /* 
             const response = await fetch(`${GOOGLE_SCRIPT_URL}?q=${encodeURIComponent(query)}`);
             const data = await response.json();
-            */
-
-            // --- MOCK DATA SIMULATION (Remove this block when using real API) ---
-            await new Promise(r => setTimeout(r, 1500)); // Fake delay
-            const mockData = [
-                { id: '1234567890123', name: 'นายสมชาย ใจดี', date: '10 มี.ค. 2569', time: '09:00 - 10:00', doctor: 'นพ. สมศักดิ์ เก่งมาก', dept: 'อายุรกรรม', status: 'confirmed' },
-                { id: '0812345678', name: 'นายสมชาย ใจดี', date: '15 เม.ย. 2569', time: '13:00', doctor: 'พญ. ใจทิพย์', dept: 'สูตินารีเวช', status: 'pending' }
-            ];
-            const data = mockData.filter(item => item.id.includes(query) || item.name.includes(query));
-            // --- END MOCK DATA ---
 
             if (data && data.length > 0) {
                 renderResults(data);
