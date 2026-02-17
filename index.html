@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบวันนัดหมายแพทย์ | Telemedicine Service</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="glass-overlay"></div>
+
+    <div class="main-wrapper">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <span>TeleMed<span class="highlight">Check</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">หน้าหลัก</a>
+                <a href="#">ติดต่อเรา</a>
+            </div>
+        </nav>
+
+        <main class="content-container">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    ตรวจสอบวันนัดหมาย<br>
+                    <span class="gradient-text">ได้ง่ายและรวดเร็ว</span>
+                </h1>
+                <p class="hero-subtitle">
+                    ระบบบริการค้นหาข้อมูลนัดหมายแพทย์ Telemedicine ออนไลน์<br>
+                    เพียงกรอกข้อมูลส่วนตัวเพื่อดูสถานะและรายละเอียดการนัด
+                </p>
+
+                <div class="search-box-wrapper">
+                    <form id="searchForm" class="search-form">
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-id-card input-icon"></i>
+                            <input type="text" id="searchInput" placeholder="เลขบัตรประชาชน หรือ เบอร์โทรศัพท์"
+                                autocomplete="off" required>
+                        </div>
+                        <button type="submit" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>ตรวจสอบข้อมูล</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="loading" class="loading-state hidden">
+                <div class="loader">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <p>กำลังเชื่อมต่อข้อมูล...</p>
+            </div>
+
+            <div id="resultContainer" class="results-grid hidden">
+                <!-- Result Card Template (Injected via JS) -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Telemedicine Service System. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for details (optional enhancement) -->
+    <div id="detailsModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
