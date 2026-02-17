@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showEmptyState() {
         resultContainer.innerHTML = `
             <div style="text-align: center; color: #64748b; padding: 2rem;">
-                <i class="fa-solid fa-file-circle-xmark" style="font-size: 3rem; margin-bottom: 1rem; color: #cbd5e1;"></i>
+                <i class="fa-solid fa-file-circle-xmark" style="font-size: 3rem; margin-bottom: 1rem; color: #ff0000ff;"></i>
                 <p>ไม่พบข้อมูลการนัดหมาย</p>
                 <small>กรุณาตรวจสอบเลขบัตรประชาชน หรือ ชื่อ-นามสกุล อีกครั้ง</small>
             </div>
