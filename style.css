@@ -191,6 +191,52 @@ body {
     margin-right: auto;
 }
 
+/* Register CTA */
+.register-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.register-cta-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background: rgba(56, 189, 248, 0.05);
+    color: var(--primary);
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    border-color: var(--primary);
+    background: rgba(56, 189, 248, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
+    color: var(--text-primary);
+}
+
+.register-btn .fa-arrow-right {
+    transition: transform 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.register-btn:hover .fa-arrow-right {
+    transform: translateX(4px);
+}
+
 /* Search Box */
 .search-form {
     display: flex;
