@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching data:', error);
             showNotification('เกิดข้อผิดพลาดในการเชื่อมต่อ', 'error');
-            resultContainer.innerHTML = '<p style="text-align:center; color:red;">ไม่สามารถเชื่อมต่อกับฐานข้อมูลได้</p>';
+            resultContainer.innerHTML = '<p style="text-align:center; color:#ef4444;">ไม่สามารถเชื่อมต่อกับฐานข้อมูลได้</p>';
             resultContainer.classList.remove('hidden');
         } finally {
             loadingDiv.classList.add('hidden');
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showEmptyState() {
         resultContainer.innerHTML = `
-            <div style="text-align: center; color: #64748b; padding: 2rem;">
-                <i class="fa-solid fa-file-circle-xmark" style="font-size: 3rem; margin-bottom: 1rem; color: #ff0000ff;"></i>
+            <div style="text-align: center; color: #94a3b8; padding: 2rem;">
+                <i class="fa-solid fa-file-circle-xmark" style="font-size: 3rem; margin-bottom: 1rem; color: #ef4444;"></i>
                 <p>ไม่พบข้อมูลการนัดหมาย</p>
                 <small>กรุณาตรวจสอบเลขบัตรประชาชน หรือ ชื่อ-นามสกุล อีกครั้ง</small>
             </div>
