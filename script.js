@@ -48,6 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function renderResults(data) {
+        resultContainer.innerHTML = '';
+
+        // Add Header
+        const header = document.createElement('div');
+        header.className = 'results-header';
+        header.innerHTML = `
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h2>พบข้อมูลการนัดหมาย</h2>
+            <span class="results-count">${data.length} รายการ</span>
+        `;
+        resultContainer.appendChild(header);
+
         data.forEach(item => {
             const card = document.createElement('div');
             card.className = 'result-card';
@@ -58,16 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <div class="card-header">
                    <div class="card-date">
-                        <i class="fa-regular fa-calendar-check" style="margin-right: 6px;"></i>
+                        <i class="fa-regular fa-calendar-check"></i>
                         ${item.date}
                    </div>
                    <span class="card-status ${statusClass}">${statusText}</span>
                 </div>
                 <div class="card-body">
-                    <p><span class="label">ชื่อ-นามสกุล</span> <span class="value">${item.name}</span></p>
-                    <p><span class="label">เวลา</span> <span class="value">${item.time} น.</span></p>
-                    <p><span class="label">แพทย์</span> <span class="value">${item.doctor}</span></p>
-                    <p><span class="label">แผนก</span> <span class="value">${item.dept}</span></p>
+                    <span class="patient-name">${item.name}</span>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-regular fa-clock" style="margin-right: 5px;"></i> เวลา</span>
+                        <span class="value">${item.time} น.</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-user-doctor" style="margin-right: 5px;"></i> แพทย์</span>
+                        <span class="value">${item.doctor}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-house-medical" style="margin-right: 5px;"></i> แผนก</span>
+                        <span class="value">${item.dept}</span>
+                    </div>
                 </div>
             `;
             resultContainer.appendChild(card);
