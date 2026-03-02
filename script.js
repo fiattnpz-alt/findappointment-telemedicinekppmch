@@ -78,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-body">
                     <span class="patient-name">${item.name}</span>
                     <div class="info-row">
+                        <span class="label"><i class="fa-regular fa-calendar-check" style="margin-right: 5px;"></i> วันที่</span>
+                        ${item.date}
+                   </div>
+                    <div class="info-row">
                         <span class="label"><i class="fa-regular fa-clock" style="margin-right: 5px;"></i> เวลา</span>
                         <span class="value">${item.time} น.</span>
                     </div>
