@@ -76,12 +76,14 @@
             </div>
 
             <div id="loading" class="loading-state hidden">
-                <div class="loader">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                <div class="heart-monitor">
+                    <svg viewBox="0 0 100 40" preserveAspectRatio="none" class="ekg-svg">
+                        <path class="ekg-path"
+                            d="M0,20 L15,20 L20,10 L25,30 L30,20 L40,20 L42,5 L45,35 L48,20 L60,20 L65,10 L70,30 L75,20 L100,20" />
+                    </svg>
+                    <div class="scan-line"></div>
                 </div>
-                <p>กำลังค้นหาข้อมูล...</p>
+                <p class="loading-text">กำลังค้นหาข้อมูล...</p>
             </div>
 
             <div id="resultContainer" class="results-grid hidden">
